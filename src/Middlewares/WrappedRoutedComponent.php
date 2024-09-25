@@ -58,7 +58,7 @@ class WrappedRoutedComponent extends RoutedComponent
      */
     public function handle(Request $request, array $data = []): string
     {
-        $component = $this->wrappedComponentClass;
+        $component = new $this->wrappedComponentClass();
         foreach ($this->middlewares as $middlewareClass) {
             $component = (new $middlewareClass($this->getDestinationName()))->wrapComponent($component);
         }
