@@ -12,7 +12,7 @@ class Wrapper
      */
     public static function wrap(string $wrappedClass, ...$middlewaresClasses): WrappedRoutedComponent
     {
-        return (new Bubblegum\Middlewares\WrappedRoutedComponent())
+        return (new WrappedRoutedComponent())
             ->setWrappedComponent($wrappedClass)
             ->setMiddlewares($middlewaresClasses);
     }
