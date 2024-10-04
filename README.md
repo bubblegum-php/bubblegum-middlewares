@@ -34,6 +34,9 @@ class TestMiddleware extends Middleware
 ### Wrap middleware around routed component
 __File app/routes.php__
 ```php
+// your controller
+use App\Controllers\TestController;
+
 // use Bubblegum middlewares down here
 use Bubblegum\Middlewares\Wrapper;
 use App\Middlewares\TestMiddleware;
